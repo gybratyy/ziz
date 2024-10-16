@@ -10,3 +10,9 @@ export interface ProductItem {
     image: string;
 }
 
+export interface CartState {
+    cart: ProductItem[];
+    addToCart: (product: ProductItem) => void;
+    removeFromCart: (id: number) => void;
+    changeQuantity: (id: number, quantity: number) => void;
+}

@@ -24,5 +24,5 @@ function generateProducts(count:number) {
 }
 
 // Example: Generate 30 products
-export const products = generateProducts(5);
+export const products = generateProducts(10);
 
