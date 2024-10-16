@@ -1,6 +1,5 @@
 import {useCartStore} from "@/zustand/cartStore";
 import { ProductItem } from '@/types';
-import Image from "next/image"
 export function Product({ product }: { product: ProductItem }) {
 
     const addToCart = useCartStore((state) => state.addToCart);
@@ -11,9 +10,10 @@ export function Product({ product }: { product: ProductItem }) {
     return (
         <li>
             <div className="group relative block overflow-hidden">
-                <Image
+                <img
                     src={product.image} alt="some image"
                     className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-72"
+
                 />
                 <div className="relative border border-gray-100 bg-white p-6">
                     <p className="text-gray-700">{product.price}$</p>

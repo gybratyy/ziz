@@ -1,6 +1,5 @@
 import { ProductItem } from "@/types";
 import { useCartStore } from "@/zustand/cartStore";
-import Image from "next/image"
 
 export function CartItem({ product }: { product: ProductItem }) {
     const updateQuantity = useCartStore((state) => state.changeQuantity);
@@ -19,7 +18,7 @@ export function CartItem({ product }: { product: ProductItem }) {
 
     return (
         <li className="flex items-center gap-4">
-            <Image
+            <img
                 src={product.image} alt={product.name}
                 className="size-16 rounded object-cover"
             />
