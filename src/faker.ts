@@ -3,7 +3,7 @@ import {ProductItem} from "@/types";
 
 // Function to generate a random product
 const generateProduct = (id:number)=> {
-    let product:ProductItem = {
+    const product:ProductItem = {
         id: id,
         name: faker.commerce.productName(),
         category: faker.commerce.department(),
